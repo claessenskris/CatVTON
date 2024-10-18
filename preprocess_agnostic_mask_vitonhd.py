@@ -39,11 +39,11 @@ def main(args):
         device='cuda', 
     )
 
-    assert os.path.exists(pair_txt := os.path.join(self.args.data_root_path,
+    assert os.path.exists(pair_txt := os.path.join(args.data_root_path,
                                                    'test_pairs_unpaired.txt')), f"File {pair_txt} does not exist."
     with open(pair_txt, 'r') as f:
         lines = f.readlines()
-    self.args.data_root_path = os.path.join(self.args.data_root_path, 'test')
+    args.data_root_path = os.path.join(args.data_root_path, 'test')
     output_dir = os.path.join(args.data_root_path, 'agnostic-mask')
     cloth_type = 'upper_body'
     for line in lines:
@@ -59,4 +59,3 @@ def main(args):
 if __name__ == "__main__":
     args = parse_args()
     main(args)
-            
