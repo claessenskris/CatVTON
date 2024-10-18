@@ -51,7 +51,7 @@ def main(args):
         if os.path.exists(os.path.join(output_dir, person_img.replace('.jpg', '.png'))):
             continue
         mask = automasker(
-            os.path.join(args.data_root_path, 'test', 'image', person_img),
+            os.path.join(args.data_root_path, 'image', person_img),
             cloth_type
         )['mask']
         mask.save(os.path.join(output_dir, person_img.replace('.jpg', '.png')))
