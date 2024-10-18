@@ -45,7 +45,7 @@ def main(args):
         lines = f.readlines()
     args.data_root_path = os.path.join(args.data_root_path, 'test')
     output_dir = os.path.join(args.data_root_path, 'agnostic-mask')
-    cloth_type = 'upper_body'
+    cloth_type = 'upper'
     for line in lines:
         person_img, _ = line.strip().split(" ")
         if os.path.exists(os.path.join(output_dir, person_img.replace('.jpg', '.png'))):
