@@ -4,8 +4,8 @@ import os
 from huggingface_hub import snapshot_download
 from tqdm import tqdm
 
-from model.cloth_masker import AutoMasker
-
+from diffusers.image_processor import VaeImageProcessor
+from model.cloth_masker import AutoMasker, vis_mask
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Simple example of Preprocess Agnostic Mask")
@@ -33,6 +33,7 @@ def parse_args():
 def main(args):
     args.repo_path = snapshot_download(repo_id=args.repo_path)
 
+    mask_processor = VaeImageProcessor(vae_scale_factor=8, do_normalize=False, do_binarize=True, do_convert_grayscale=True)
     automasker = AutoMasker(
         densepose_ckpt=os.path.join(args.repo_path, "DensePose"),
         schp_ckpt=os.path.join(args.repo_path, "SCHP"),
@@ -54,7 +55,11 @@ def main(args):
             os.path.join(args.data_root_path, 'image', person_img),
             cloth_type
         )['mask']
+        mask = mask_processor.blur(mask, blur_factor=9)
         mask.save(os.path.join(output_dir, person_img.replace('.jpg', '.png')))
+        masked_person = vis_mask(person_image, mask)
+        person_img_vis = person_img[:-4] + '_vis' + person_img[-4:]
+        masked_person.save(os.path.join(output_dir, person_img_vis.replace('.jpg', '.png')))
 
 if __name__ == "__main__":
     args = parse_args()
