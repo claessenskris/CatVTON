@@ -57,9 +57,9 @@ def main(args):
         )['mask']
         mask = mask_processor.blur(mask, blur_factor=9)
         mask.save(os.path.join(output_dir, person_img.replace('.jpg', '.png')))
-        masked_person = vis_mask(person_image, mask)
-        person_image_vis = person_image[:-4] + '_vis' + person_image[-4:]
-        masked_person.save(os.path.join(output_dir, person_image_vis.replace('.jpg', '.png')))
+        masked_person = vis_mask(person_img, mask)
+        person_img_vis = person_img[:-4] + '_vis' + person_img[-4:]
+        masked_person.save(os.path.join(output_dir, person_img_vis.replace('.jpg', '.png')))
 
 if __name__ == "__main__":
     args = parse_args()
