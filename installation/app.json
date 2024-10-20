@@ -3,7 +3,7 @@
     "id": 1,
     "app": "Parse_agnostic",
     "LogicalName": "2D_Human_Agnostic_Mask",
-    "instructions": "python3 preprocess_agnostic_mask_vitonhd.py --data_root_path data/cat_vton_input",
+    "instructions": "python3 preprocess_agnostic_mask_vitonhd.py --data_root_path data/agnostic-mask",
     "trigger_id": 7
   },
   {
