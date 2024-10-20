@@ -4,7 +4,7 @@
    {"id": 4, "app": "Parse_agnostic", "pos": "end", "foreign-id" : 2, "path" : "cat_vton_input", "storage" : "cloud", "ext" : "txt", "time_out" : 30},
    {"id": 5, "app": "Parse_agnostic", "pos": "end", "foreign-id" : 1, "path" : "cat_vton_input/test/image", "storage" : "cloud", "ext" : "jpg", "time_out" : 30},
    {"id": 6, "app": "Parse_agnostic", "pos": "end", "foreign-id" : 3, "path" : "cat_vton_input/test/cloth", "storage" : "cloud", "ext" : "jpg", "time_out" : 30},
-   {"id": 7, "app": "Parse_agnostic", "pos": "begin", "path" : "cat_vton_input/test/cloth", "storage" : "local", "ext" : "jpg", "time_out" : 30, "Case_ID" : "yes"},
+   {"id": 7, "app": "Parse_agnostic", "pos": "begin", "path" : "cat_vton_input", "storage" : "local", "ext" : "txt", "time_out" : 30, "Case_ID" : "no"},
    {"id": 8, "app": "Parse_agnostic", "pos": "begin", "path" : "cat_vton_input/test/agnostic-mask", "storage" : "local", "ext" : "jpg", "time_out" : 30, "Case_ID" : "yes"},
    {"id": 9, "app": "CatVTON", "pos": "begin", "path" : "cat_vton_input/test/agnostic-mask", "storage" : "local", "ext" : "png", "time_out" : 30, "Case_ID" : "yes"},
    {"id": 10, "app": "CatVTON", "pos": "begin", "path" : "cat_vton_output/vitonhd-512/unpaired", "storage" : "cloud", "ext" : "jpg", "time_out" : 30, "Case_ID" : "yes"},
