@@ -1,2 +1,2 @@
 python3 preprocess_agnostic_mask_vitonhd.py --data_root_path data/cat_vton_input
-python3 inference.py --data_root_path data/cat_vton_input --output_dir data/cat_vton_output --dataloader_num_workers 4 --batch_size 8 --seed 555  --mixed_precision bf16 --repaint --dataset_name vitonhd --allow_tf32
+python3 inference.py --data_root_path data/cat_vton_input --output_dir data/cat_vton_output --dataloader_num_workers 4 --batch_size 8 --seed 555  --mixed_precision bf16 --dataset_name vitonhd --allow_tf32
