@@ -4,13 +4,13 @@
     "app": "Parse_agnostic",
     "LogicalName": "2D_Human_Agnostic_Mask",
     "instructions": "python3 preprocess_agnostic_mask_vitonhd.py --data_root_path data/cat_vton_input",
-    "trigger_id": 6
+    "trigger_id": 7
   },
   {
     "id": 2,
     "app": "CatVTON",
     "LogicalName": "2D_Virtual_Try_On",
     "instructions": "python3 inference.py --data_root_path data/cat_vton_input --output_dir data/cat_vton_output --dataloader_num_workers 4 --batch_size 8 --seed 555 --mixed_precision no --dataset_name vitonhd --allow_tf32",
-    "trigger_id": 9
+    "trigger_id": 12
   }
 ]
