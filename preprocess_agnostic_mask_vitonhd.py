@@ -56,7 +56,7 @@ def main(args):
             cloth_type
         )['mask']
         mask = mask_processor.blur(mask, blur_factor=9)
-        mask.save(os.path.join(output_dir, person_img.replace('.jpg', '.png')))
+        mask.save(os.path.join(output_dir, person_img.replace('.jpg', '_mask.png')))
         masked_person = vis_mask(person_img, mask)
         person_img_vis = person_img[:-4] + '_vis' + person_img[-4:]
         masked_person.save(os.path.join(output_dir, person_img_vis.replace('.jpg', '.png')))
