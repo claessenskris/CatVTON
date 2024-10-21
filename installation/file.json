@@ -11,5 +11,5 @@
    {"id": 11, "app": "CatVTON", "pos": "end",  "foreign-id" : 3, "path" : "cat_vton_input/test/cloth", "storage" : "cloud", "ext" : "jpg", "time_out" : 30, "Case_ID" : "yes"},
    {"id": 12, "app": "CatVTON", "pos": "begin", "path" : "data/cat_vton_input/test/agnostic-mask", "storage" : "local", "ext" : "png", "time_out" : 30, "Case_ID" : "yes"},
    {"id": 13, "app": "CatVTON", "pos": "begin", "path" : "cat_vton_output/vitonhd-512/unpaired", "storage" : "cloud", "ext" : "jpg", "time_out" : 30, "Case_ID" : "yes"},
-   {"id": 14, "app": "Ladi-Vton", "pos": "end", "foreign-id" : 13, "path" : "C:/Users/krisc/_tf2py310/FileSharing/Target", "storage" : "local", "ext" : "jpg", "LogicalName" : "VTON_image", "time_out" : 240}
+   {"id": 14, "app": "CatVTON", "pos": "end", "foreign-id" : 13, "path" : "C:/Users/krisc/_tf2py310/FileSharing/Target", "storage" : "local", "ext" : "jpg", "LogicalName" : "VTON_image", "time_out" : 240}
 ]
