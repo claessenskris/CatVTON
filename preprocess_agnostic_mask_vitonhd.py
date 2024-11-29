@@ -1,8 +1,8 @@
 import argparse
 import os
+import json
 
 from huggingface_hub import snapshot_download
-from tqdm import tqdm
 
 from diffusers.image_processor import VaeImageProcessor
 from model.cloth_masker import AutoMasker
@@ -46,11 +46,14 @@ def main(args):
         lines = f.readlines()
     args.data_root_path = os.path.join(args.data_root_path, 'test')
     output_dir = os.path.join(args.data_root_path, 'agnostic-mask')
-    cloth_type = 'upper' # ToDo : use this as a variable instead as a constant
     for line in lines:
-        person_img, _ = line.strip().split(" ")
+        person_img, cloth_img = line.strip().split(" ")
         if os.path.exists(os.path.join(output_dir, person_img.replace('.jpg', '.png'))):
             continue
+        cloth_img_without_ext = os.path.splitext(cloth_img)[0]
+        cloth_img_json = os.path.join(args.data_root_path, 'cloth', f"{cloth_img_without_ext}.json")
+        with open (cloth_img_json, "r") as read_file:json_record = json.load(read_file) 
+        cloth_type = json_record['cloth_type'] 
         mask = automasker(
             os.path.join(args.data_root_path, 'image', person_img),
             cloth_type
