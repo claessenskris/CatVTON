@@ -11,8 +11,9 @@
    {"id": 11, "app": "CatVTON", "pos": "end",  "foreign-id" : 1, "path" : "cat_vton_input/test/image", "storage" : "cloud", "ext" : "jpg", "time_out" : 30, "Case_ID" : "yes"},
    {"id": 12, "app": "CatVTON", "pos": "end",  "foreign-id" : 2, "path" : "cat_vton_input", "storage" : "cloud", "ext" : "txt", "time_out" : 30, "Case_ID" : "no"},
    {"id": 13, "app": "CatVTON", "pos": "end",  "foreign-id" : 3, "path" : "cat_vton_input/test/cloth", "storage" : "cloud", "ext" : "jpg", "time_out" : 30, "Case_ID" : "yes"},
-   {"id": 14, "app": "CatVTON", "pos": "end",  "foreign-id" : 10, "path" : "cat_vton_input/test/agnostic-mask", "storage" : "cloud", "ext" : "png", "time_out" : 30, "Case_ID" : "yes"},
-   {"id": 15, "app": "CatVTON", "pos": "begin", "path" : "data/cat_vton_input/test/agnostic-mask", "storage" : "local", "ext" : "png", "time_out" : 30, "Case_ID" : "yes"},
-   {"id": 16, "app": "CatVTON", "pos": "begin", "path" : "cat_vton_output/vitonhd-512/unpaired", "storage" : "cloud", "ext" : "jpg", "time_out" : 30, "Case_ID" : "yes"},
-   {"id": 17, "app": "CatVTON", "pos": "end", "foreign-id" : 16, "path" : "C:/Users/krisc/_tf2py310/FileSharing/Target", "storage" : "local", "ext" : "jpg", "LogicalName" : "VTON_image", "time_out" : 240}
+   {"id": 14, "app": "CatVTON", "pos": "end",  "foreign-id" : 4, "path" : "cat_vton_input/test/cloth", "storage" : "cloud", "ext" : "json", "time_out" : 30, "Case_ID" : "yes"},
+   {"id": 15, "app": "CatVTON", "pos": "end",  "foreign-id" : 10, "path" : "cat_vton_input/test/agnostic-mask", "storage" : "cloud", "ext" : "png", "time_out" : 30, "Case_ID" : "yes"},
+   {"id": 16, "app": "CatVTON", "pos": "begin", "path" : "data/cat_vton_input/test/agnostic-mask", "storage" : "local", "ext" : "png", "time_out" : 30, "Case_ID" : "yes"},
+   {"id": 17, "app": "CatVTON", "pos": "begin", "path" : "cat_vton_output/vitonhd-512/unpaired", "storage" : "cloud", "ext" : "jpg", "time_out" : 30, "Case_ID" : "yes"},
+   {"id": 18, "app": "CatVTON", "pos": "end", "foreign-id" : 17, "path" : "C:/Users/krisc/_tf2py310/FileSharing/Target", "storage" : "local", "ext" : "jpg", "LogicalName" : "VTON_image", "time_out" : 240}
 ]
