@@ -231,6 +231,7 @@ def repaint(person, mask, result):
     person_np = np.array(person)
     result_np = np.array(result)
     mask_np = np.array(mask) / 255
+    mask_np = np.expand_dims(mask_np, axis=-1)
     repaint_result = person_np * (1 - mask_np) + result_np * mask_np
     repaint_result = Image.fromarray(repaint_result.astype(np.uint8))
     return repaint_result
