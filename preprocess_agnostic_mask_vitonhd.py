@@ -52,8 +52,12 @@ def main(args):
             continue
         cloth_img_without_ext = os.path.splitext(cloth_img)[0]
         cloth_img_json = os.path.join(args.data_root_path, 'cloth', f"{cloth_img_without_ext}.json")
-        with open (cloth_img_json, "r") as read_file:json_record = json.load(read_file) 
-        cloth_type = json_record['cloth_type'] 
+        try:
+            with open(cloth_img_json, 'r') as read_file:
+                json_record = json.load(read_file)
+            cloth_type = json_record['cloth_type']
+        except FileNotFoundError:
+            continue
         mask = automasker(
             os.path.join(args.data_root_path, 'image', person_img),
             cloth_type
