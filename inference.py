@@ -305,7 +305,9 @@ def main():
             masks = to_pil_image(masks)
         for i, result in enumerate(results):
             person_name = batch['person_name'][i]
-            output_path = os.path.join(args.output_dir, person_name)
+            cloth_name =  batch['cloth'][i]
+            filename    = f"{person_name}_{cloth_name}"
+            output_path = os.path.join(args.output_dir, filename)
             if not os.path.exists(os.path.dirname(output_path)):
                 os.makedirs(os.path.dirname(output_path))
             if args.repaint:
