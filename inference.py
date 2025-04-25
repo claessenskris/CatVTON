@@ -6,6 +6,7 @@ from torch.utils.data import Dataset, DataLoader
 from diffusers.image_processor import VaeImageProcessor
 from tqdm import tqdm
 from PIL import Image, ImageFilter
+from pathlib import Path
 
 from model.pipeline import CatVTONPipeline
 
@@ -221,7 +222,6 @@ def parse_args():
 
     return args
 
-
 def repaint(person, mask, result):
     _, h = result.size
     kernal_size = h // 50
@@ -304,9 +304,9 @@ def main():
             cloth_images = to_pil_image(cloth_images)
             masks = to_pil_image(masks)
         for i, result in enumerate(results):
-            person_name = batch['person_name'][i]
-            cloth_name =  batch['cloth'][i]
-            filename    = f"{person_name}_{cloth_name}"
+            person_name, ext = os.path.splitext(batch['person_name'][i])
+            cloth_name =  os.path.basename['cloth'][i])
+            filename    = f"{person_name}_{cloth_name}.{ext}"
             output_path = os.path.join(args.output_dir, filename)
             if not os.path.exists(os.path.dirname(output_path)):
                 os.makedirs(os.path.dirname(output_path))
