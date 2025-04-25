@@ -305,7 +305,7 @@ def main():
             masks = to_pil_image(masks)
         for i, result in enumerate(results):
             person_name, ext = os.path.splitext(batch['person_name'][i])
-            cloth_name =  os.path.basename['cloth'][i])
+            cloth_name =  os.path.basename('cloth'][i])
             filename    = f"{person_name}_{cloth_name}.{ext}"
             output_path = os.path.join(args.output_dir, filename)
             print ('output_path ', output_path)
