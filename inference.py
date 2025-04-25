@@ -308,6 +308,7 @@ def main():
             cloth_name =  os.path.basename['cloth'][i])
             filename    = f"{person_name}_{cloth_name}.{ext}"
             output_path = os.path.join(args.output_dir, filename)
+            print ('output_path ', output_path)
             if not os.path.exists(os.path.dirname(output_path)):
                 os.makedirs(os.path.dirname(output_path))
             if args.repaint:
