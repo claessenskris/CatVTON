@@ -1,6 +1,4 @@
 #!/bin/bash
-gcsfuse --implicit-dirs image_generator_request /pascalem/_pyt/CatVTON/data
-
 cd /pascalem
 
 source _pyt/bin/activate
@@ -13,4 +11,4 @@ fi
 
 cd _pyt/CatVTON
 
-python3 FileAppRun.py --run_id CatVTON --bucket image_generator_request --config _config3 --token confident-coder-285618-1a0704c69644.json 
+python3 FileSharing_Run.py --run_id CatVTON --bucket image_generator_request --config _config3 --token confident-coder-285618-1a0704c69644.json 
