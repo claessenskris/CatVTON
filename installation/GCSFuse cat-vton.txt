@@ -1,1 +1,0 @@
-gcsfuse --implicit-dirs image_generator_request /pascalem/_pyt/CatVTON/data
